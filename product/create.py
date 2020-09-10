@@ -11,8 +11,8 @@ dynamodb = boto3.resource('dynamodb')
 def create(event, context):
     data = json.loads(event['body'])
     if 'name' not in data:
-        logging.error("Validation Failed")
-        raise Exception("Couldn't create the todo item.")
+        logging.error("Te falto el Nombre !!")
+        raise Exception("Couldn't create the product item.")
     
     timestamp = str(time.time())
 
@@ -20,7 +20,10 @@ def create(event, context):
 
     item = {
         'id': str(uuid.uuid1()),
+        'category': data['category'],
         'name': data['name'],
+        'description': data['description'],
+        'price': data['price'],
         'createdAt': timestamp,
         'updatedAt': timestamp,
     }
