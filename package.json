@@ -1,0 +1,7 @@
+{
+  "name": "DevProyects/aws-python-rest-product",
+  "version": "1.0.0",
+  "description": "Serverless CRUD service exposing a REST HTTP interface",
+  "author": "Franco Arraño",
+  "license": "MIT"
+}
